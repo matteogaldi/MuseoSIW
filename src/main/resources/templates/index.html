@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h1 th:text="#{header.index}">Galleria Nazionale d'Arte Moderna</h1>
+    <nav>
+        <a th:href="@{/autori}">Autori</a>
+        <a th:href="@{/autori}">Collezioni</a>
+        <a th:href="@{/autori}">Informazioni</a>
+        <a th:href="@{/login}" th:text="#{index.login}">Area Riservata</a>
+    </nav>
+</div>
+
+</body>
+</html>
