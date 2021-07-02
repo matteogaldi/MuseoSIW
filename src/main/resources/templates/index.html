@@ -2,16 +2,75 @@
 <html lang="it" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/animations.css">
 </head>
 <body>
-<div>
-    <h1 th:text="#{header.index}">Galleria Nazionale d'Arte Moderna</h1>
-    <nav>
-        <a th:href="@{/autori}">Autori</a>
-        <a th:href="@{/autori}">Collezioni</a>
-        <a th:href="@{/autori}">Informazioni</a>
-        <a th:href="@{/login}" th:text="#{index.login}">Area Riservata</a>
-    </nav>
+<div class="container">
+    <div class="center">
+        <nav>
+            <div class="scale-up-center">
+                <a th:href="@{/autori}">Artisti</a>
+            </div>
+            <div class="scale-up-center">
+                <a th:href="@{/autori}">Collezioni</a>
+            </div>
+            <div class="scale-up-center">
+                <a th:href="@{/autori}">Informazioni</a>
+            </div>
+            <div class="scale-up-center">
+                <a th:href="@{/autori}">Login</a>
+            </div>
+        </nav>
+        <h1 th:text="#{header.index}">Galleria Nazionale d'Arte Moderna</h1>
+        <h3>Le nostre collezioni</h3>
+
+        <div class="collections">
+            <div class="card" style="background-image: url('../static/images/cosmowoman.jpg')">
+                <div class="effect">
+                    <div class="card-item">
+                        <div>
+                            <h3 class="title">Cosmowoman</h3>
+                            <p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+                                delectus
+                                dolor, dolore doloremque, enim illum labore laborum natus nisi nulla quis, voluptas. A
+                                aspernatur enim minus necessitatibus neque vero vitae?</p>
+                            <h4>Fino al 08/07</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="background-image: url('../static/images/cosmowoman.jpg')">
+            </div>
+            <div class="card" style="background-image: url('../static/images/cosmowoman.jpg')">
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="intro-tiles" class="intro">
+        <div class="artwork-home"
+             style="background-image: url('../static/images/1574235639788_Ercole-e-Lica.jpeg')">
+        </div>
+
+        <div class="artwork-home"
+             style="background-image: url('../static/images/1574235639788_Ercole-e-Lica.jpeg')">
+        </div>
+
+        <div class="artwork-home"
+             style="background-image: url('../static/images/1574235639788_Ercole-e-Lica.jpeg')">
+        </div>
+
+        <div class="artwork-home"
+             style="background-image: url('../static/images/1574235639788_Ercole-e-Lica.jpeg')">
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Copyright 2021 &copy; La Galleria Nazionale </p>
+    </div>
+
 </div>
 
 </body>
