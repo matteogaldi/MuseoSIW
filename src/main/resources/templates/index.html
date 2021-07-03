@@ -1,71 +1,63 @@
 <!DOCTYPE html>
 <html lang="it" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
-    <link rel="stylesheet" href="../static/css/animations.css">
 </head>
 <body>
-<div class="container">
-    <div class="center">
-        <nav>
-            <div class="scale-up-center">
-                <a th:href="@{/autori}">Artisti</a>
-            </div>
-            <div class="scale-up-center">
-                <a th:href="@{/autori}">Collezioni</a>
-            </div>
-            <div class="scale-up-center">
-                <a th:href="@{/autori}">Informazioni</a>
-            </div>
-            <div class="scale-up-center">
-                <a th:href="@{/autori}">Login</a>
-            </div>
-        </nav>
-        <h1 th:text="#{header.index}">Galleria Nazionale d'Arte Moderna</h1>
-        <h3>Le nostre collezioni</h3>
 
-        <div class="collections">
-            <div class="card" style="background-image: url('../static/images/cosmowoman.jpg')">
-                <div class="effect">
-                    <div class="card-item">
-                        <div>
-                            <h3 class="title">Cosmowoman</h3>
-                            <p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
-                                delectus
-                                dolor, dolore doloremque, enim illum labore laborum natus nisi nulla quis, voluptas. A
-                                aspernatur enim minus necessitatibus neque vero vitae?</p>
-                            <h4>Fino al 08/07</h4>
-                        </div>
-                    </div>
-                </div>
+<div class="grid">
+    <main class="main-content">
+        <h1>Beyond art</h1>
+        <i>Gli artisti che sono andati oltre l'arte</i>
+        <h2>Cos'è lo Spazialismo</h2>
+        <p>The movement (Movimento Spaziale &hyphen; spacialist movement, or spacialism) was launched in 1947 after
+            Lucio
+            Fontana’s return to Italy from Argentina with the first Manifiesto Spaziale (spatialist manifesto). In this,
+            and in the several more that followed, Fontana developed the ideas of the Manifiesto Blanco issued at the
+            Altamira Academy in Buenos Aires the year before. There he had called for an art that embraced science and
+            technology and made use of such things as neon light, radio and television.</p>
+
+        <p>In 1949 Fontana installed his Ambiente Spaziale at the Galleria del Naviglio in Milan. It consisted of an
+            abstract object painted with phosphorescent paint and lit by a neon light, and was a pioneering example of
+            what became known as installation art. He subsequently went on to make the works on canvas to which he gave
+            the generic title of Concetto Spaziale (spatial concept) although continuing to make installations using
+            light. The basis of the Concetto Spaziale works was the piercing, or later slashing with a razor, of the
+            canvas to create an actual dimension of space. Fontana made a long series of these and extended the idea
+            into sculpture in his Concetto Spaziale, Natura series.</p>
+
+        <div class="flagship">
+            <div class="artwork">
+                <img src="../static/images/spatialism.jpeg" alt="spatialism">
+            </div>
+
+            <div class="artwork">
+                <img src="../static/images/spatialism2.jpeg" alt="spatialism">
+            </div>
+
+            <div class="artwork">
+                <img src="../static/images/spatialism3.jpeg" alt="spatialism">
+            </div>
+
+            <div class="artwork">
+                <img src="../static/images/spatialism4.jpeg" alt="spatialism">
             </div>
         </div>
 
-    </div>
+    </main>
 
+    <nav>
+        <a href="collezione.html">Collezioni</a>
+        <a href="artists.html">Artisti</a>
+        <a href="opera.html">Opere</a>
+        <a>Login</a>
 
-    <div id="intro-tiles" class="intro">
-        <div class="artwork-home"
-             style="background-image: url('../static/images/1574235639788_Ercole-e-Lica.jpeg')">
-        </div>
+        <footer>
+            <p>Copyright &copy; 2021 Matteo Galdi</p>
+        </footer>
+    </nav>
 
-        <div class="artwork-home"
-             style="background-image: url('../static/images/1574235639788_Ercole-e-Lica.jpeg')">
-        </div>
-
-        <div class="artwork-home"
-             style="background-image: url('../static/images/1574235639788_Ercole-e-Lica.jpeg')">
-        </div>
-
-        <div class="artwork-home"
-             style="background-image: url('../static/images/1574235639788_Ercole-e-Lica.jpeg')">
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>Copyright 2021 &copy; La Galleria Nazionale </p>
-    </div>
 
 </div>
 

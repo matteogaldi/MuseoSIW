@@ -6,6 +6,7 @@
     grid-template-columns: 5% 90% 5%;
     grid-template-rows: 15% 85%;
     height: 100vh;
+    overflow: scroll;
 }
 
 nav {
@@ -16,3 +17,45 @@ nav {
     justify-content: space-around;
 }
 
+.artists {
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+
+form > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    width: 40%;
+    height: 50px;
+    margin-right: 1em;
+    border-width: 0 0 1px 0;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 0;
+}
+
+input:focus {
+    outline-width: 0;
+}
+
+button {
+    border-width: 0;
+    background: transparent;
+    cursor: pointer;
+    height: 50px;
+    font-size: 1.5em;
+}
+
+.all-artists {
+    margin-top: 2em;
+}
+
+.artist-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
