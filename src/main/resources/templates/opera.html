@@ -2,14 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/artwork.css">
     <title>Title</title>
 </head>
 <body>
-<h1>Tagli 1</h1>
-<h2><a><i>Lucio Fontana</i></a></h2>
-<p>
-    https://images.unsplash.com/photo-1615726719242-47aaf6305fa3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80</p>
-<img src="https://images.unsplash.com/photo-1615726719242-47aaf6305fa3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80">
+<div class="grid">
+    <div class="artwork">
+        <img src="../static/images/tagli.jpeg" alt="">
+    </div>
+    <div class="description">
+        <a class="go-back" href="" onclick="goBack()">← Torna indietro</a>
+        <h1>Tagli 1</h1>
+        <a href="">
+            <i>Lucio Fontana</i>
+        </a>
+        <br>
+        <i>1980</i>
 
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam at consequuntur ea, eaque est, harum
+            maxime, non quasi reiciendis tenetur ullam? Fuga illum inventore itaque, nobis nulla optio quia!</p>
+    </div>
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
 </body>
 </html>
