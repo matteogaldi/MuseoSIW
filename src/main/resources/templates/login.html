@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/css/login.css" th:href="@{/css/login.css}">
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<div class="grid">
+    <div class="bg-image" th:style="'background-image: url('+ '/images/tagli.jpeg' +');'"
+         style="background-image: url('../static/images/tagli.jpeg')"></div>
+    <div class="form-container">
+        <h1>Accedi ora per effettuare le ricerche</h1>
+        <form th:action="@{/login}" method="post">
+            <label for="username"></label>
+            <input type="text" name="username" id="username" placeholder="Username">
+
+            <label for="password"></label>
+            <input type="password" name="password" id="password" placeholder="Password">
+
+            <button type="submit">Accedi</button>
+            <a href="">Non hai un account? Registrati</a>
+        </form>
+
+    </div>
+</div>
+</body>
+</html>

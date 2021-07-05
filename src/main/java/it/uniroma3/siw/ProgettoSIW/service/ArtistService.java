@@ -20,8 +20,7 @@ public class ArtistService {
         return artistRepository.save(artist);
     }
 
-    @Transactional
-    public List<Artist> getAll() {
+    public List<Artist> findAll() {
         return (List<Artist>) artistRepository.findAll();
     }
 
@@ -31,4 +30,8 @@ public class ArtistService {
         return artist.orElse(null);
     }
 
+    public boolean alreadyExists(Artist artist) {
+        List<Artist> artists = artistRepository.findArtistByNameAndSurname(artist.getName(), artist.getSurname());
+        return artists.size() > 0;
+    }
 }

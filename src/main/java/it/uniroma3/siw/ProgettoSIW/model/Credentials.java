@@ -24,4 +24,7 @@ public class Credentials {
 
     @Column(nullable = false)
     private String role;
+
+    @OneToOne(cascade = CascadeType.MERGE)
+    private User user;
 }

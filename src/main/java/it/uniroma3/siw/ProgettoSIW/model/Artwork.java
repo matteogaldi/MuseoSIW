@@ -16,9 +16,10 @@ public class Artwork {
     private String title;
     private Integer year;
     private String description;
+    private String photoURL;
 
     @ManyToOne
-    private Collection collection;
+    private ArtCollection artCollection;
 
     @ManyToOne
     private Artist artist;

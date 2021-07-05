@@ -22,14 +22,20 @@ public class Artist {
     private String surname;
 
     @Column(nullable = false)
-    private LocalDate dateOfBirth;
+    private String dateOfBirth;
 
     @Column(nullable = false)
     private String placeOfBirth;
 
-    private LocalDate dateOfDeath;
+    private String dateOfDeath;
 
     private String placeOfDeath;
+
+    private String nationality;
+
+    private String biography;
+
+    private String photoFileName;
 
     @OneToMany(mappedBy = "artist")
     private List<Artwork> artworkList;

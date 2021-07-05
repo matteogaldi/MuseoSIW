@@ -29,29 +29,29 @@
 
         <div class="flagship">
             <div class="artwork">
-                <img src="../static/images/spatialism.jpeg" alt="spatialism">
+                <img src="../static/images/spatialism.jpeg" th:src="@{/images/spatialism.jpeg}" alt="spatialism">
             </div>
 
             <div class="artwork">
-                <img src="../static/images/spatialism2.jpeg" alt="spatialism">
+                <img src="../static/images/spatialism2.jpeg" th:src="@{/images/spatialism2.jpeg}" alt="spatialism">
             </div>
 
             <div class="artwork">
-                <img src="../static/images/spatialism3.jpeg" alt="spatialism">
+                <img src="../static/images/spatialism3.jpeg" th:src="@{/images/spatialism3.jpeg}" alt="spatialism">
             </div>
 
             <div class="artwork">
-                <img src="../static/images/spatialism4.jpeg" alt="spatialism">
+                <img src="../static/images/spatialism4.jpeg" th:src="@{/images/spatialism4.jpeg}" alt="spatialism">
             </div>
         </div>
 
     </main>
 
     <nav>
-        <a href="collezione.html">Collezioni</a>
-        <a href="artists.html">Artisti</a>
-        <a href="opera.html">Opere</a>
-        <a>Login</a>
+        <a th:href="@{/collections}">Collezioni</a>
+        <a th:href="@{/artists}">Artisti</a>
+        <a th:href="@{/artworks}">Opere</a>
+        <a th:href="@{/login}">Login</a>
 
         <footer>
             <p>Copyright &copy; 2021 Matteo Galdi</p>

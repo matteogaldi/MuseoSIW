@@ -9,7 +9,7 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-public class Collection {
+public class ArtCollection {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,6 +22,6 @@ public class Collection {
     @ManyToOne
     private Curator curator;
 
-    @OneToMany(mappedBy = "collection")
+    @OneToMany(mappedBy = "artCollection")
     private List<Artwork> artworkList;
 }

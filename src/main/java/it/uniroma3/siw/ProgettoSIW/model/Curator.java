@@ -27,7 +27,7 @@ public class Curator {
     private String badge;
 
     @OneToMany(mappedBy = "curator")
-    private List<Collection> collectionList;
+    private List<ArtCollection> artCollectionList;
 
 
 }

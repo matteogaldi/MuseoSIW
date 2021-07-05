@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../static/css/home.css" th:href="@{/css/home.css}">
+    <title>Admin</title>
+</head>
+<body>
+<div class="grid">
+    <h1>Sei nel pannello di amministrazione</h1>
+    <nav>
+        <a th:href="@{/admin/artist}">
+            <button>
+                Aggiungi artista
+            </button>
+        </a>
+
+        <a th:href="@{/admin/artwork}">
+            <button>
+                Aggiungi opera
+            </button>
+        </a>
+
+        <a href="">
+            <button>
+                Aggiungi collezione
+            </button>
+        </a>
+
+        <a href="">
+            <button>
+                Aggiungi curatore
+            </button>
+        </a>
+
+        <a href="/logout">Logout</a>
+
+    </nav>
+</div>
+
+</body>
+</html>

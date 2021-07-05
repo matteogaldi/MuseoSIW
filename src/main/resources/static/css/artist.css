@@ -1,7 +1,5 @@
-html, body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-}
+@import "reset.css";
+@import "animations.css";
 
 .grid {
     display: grid;
