@@ -9,8 +9,8 @@
 <body>
 
 <div class="grid">
-    <h1>Aggiungi un artista</h1>
-    <!--/*@thymesVar id="artist" type="it.uniroma3.siw.ProgettoSIW.model.Artist"*/-->
+    <h1>Aggiungi un'opera</h1>
+    <!--/*@thymesVar id="artwork" type="it.uniroma3.siw.ProgettoSIW.model.Artwork"*/-->
     <form th:action="@{/admin/artwork}" method="post" th:object="${artwork}">
         <label for="name">Titolo</label>
         <input type="text" id="name" th:field="*{title}">
@@ -24,10 +24,19 @@
         <label for="pu">Nome file</label>
         <input type="text" id="pu" th:field="*{photoURL}">
 
+        <!--/*@thymesVar id="artist" type="it.uniroma3.siw.ProgettoSIW.model.Artist"*/-->
         <label for="artist">Artista</label>
         <select id="artist" th:field="*{artist}">
             <option th:each="artist : ${artists}" th:value="${artist.id}" th:text="|${artist.name} ${artist.surname}|">
                 Lucio Fontana
+            </option>
+        </select>
+
+        <!--/*@thymesVar id="artCollection" type="it.uniroma3.siw.ProgettoSIW.model.ArtCollection"*/-->
+        <label for="collection">Collezione</label>
+        <select id="collection" th:field="*{artCollection}">
+            <option th:each="artCollection : ${artCollections}" th:value="${artCollection.id}" th:text="${artCollection.name}">
+                Permanente
             </option>
         </select>
 
@@ -38,6 +47,10 @@
         </div>
     </form>
 </div>
-
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 package it.uniroma3.siw.ProgettoSIW.controller;
 
 import it.uniroma3.siw.ProgettoSIW.model.Artwork;
+import it.uniroma3.siw.ProgettoSIW.service.ArtCollectionService;
 import it.uniroma3.siw.ProgettoSIW.service.ArtistService;
 import it.uniroma3.siw.ProgettoSIW.service.ArtworkService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,11 +22,20 @@ public class ArtworkController {
     @Autowired
     private ArtistService artistService;
 
+    @Autowired
+    private ArtCollectionService collectionService;
+
+    @GetMapping(value = "/artworks")
+    public String getArtworks(Model model) {
+        model.addAttribute("artworks", this.service.getAll());
+        return "artworks";
+    }
+
     @GetMapping(value = "/artwork/{id}")
     public String getArtwork(@PathVariable("id") Long id, Model model) {
         Artwork artwork = this.service.findById(id);
         model.addAttribute("artwork", artwork);
-        return "opera";
+        return "artwork";
     }
 
     @PostMapping(value = "/admin/artwork")
@@ -42,6 +52,7 @@ public class ArtworkController {
     public String showArtworkForm(Model model) {
         model.addAttribute("artwork", new Artwork());
         model.addAttribute("artists", this.artistService.findAll());
+        model.addAttribute("artCollections", this.collectionService.findAll());
         return "admin/artworkForm";
     }
 }

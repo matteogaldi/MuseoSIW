@@ -1,0 +1,53 @@
+@import "reset.css";
+@import "animations.css";
+
+a {
+    color: #0a0a0a;
+}
+
+nav {
+    width: 100%;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.top {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 80vh;
+    overflow: scroll;
+}
+
+.grid > a {
+    object-fit: cover;
+    object-position: center;
+    height: 400px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: invert(0);
+    transition-duration: 1s;
+}
+
+img:hover {
+    filter: invert(100%);
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+}
+
+

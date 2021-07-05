@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Artisti</title>
     <link rel="stylesheet" href="../static/css/artists.css" th:href="@{/css/artists.css}">
+    <title>Collezioni</title>
 </head>
 <body>
 <div class="grid">
@@ -26,7 +26,6 @@
         <div class="scale-up-center">
             <a th:href="@{/login}">Area riservata</a>
         </div>
-
     </nav>
 
     <div class="artists">
@@ -38,13 +37,13 @@
             </div>
         </form>
 
+        <!--/*@thymesVar id="artCollection" type="it.uniroma3.siw.ProgettoSIW.model.ArtCollection"*/-->
         <div class="all-artists">
-            <div th:each="artist : ${artists}">
+            <div th:each="artCollection : ${artCollections}">
                 <hr>
                 <div class="artist-info">
-                    <!--/*@thymesVar id="artist" type="it.uniroma3.siw.ProgettoSIW.model.Artist"*/-->
-                    <a href="artist.html" th:href="'/artist/'+${artist.getId()}">
-                        <h3 th:text="|${artist.name} ${artist.surname}|">Lucio Fontana</h3>
+                    <a href="artist.html" th:href="'/collection/'+${artCollection.id}">
+                        <h3 th:text="|${artCollection.name}|">Spazialismo</h3>
                     </a>
                 </div>
             </div>

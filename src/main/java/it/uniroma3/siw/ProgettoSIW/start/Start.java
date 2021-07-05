@@ -1,13 +1,7 @@
 package it.uniroma3.siw.ProgettoSIW.start;
 
-import it.uniroma3.siw.ProgettoSIW.model.Artist;
-import it.uniroma3.siw.ProgettoSIW.model.Artwork;
-import it.uniroma3.siw.ProgettoSIW.model.Credentials;
-import it.uniroma3.siw.ProgettoSIW.model.User;
-import it.uniroma3.siw.ProgettoSIW.service.ArtistService;
-import it.uniroma3.siw.ProgettoSIW.service.ArtworkService;
-import it.uniroma3.siw.ProgettoSIW.service.CredentialsService;
-import it.uniroma3.siw.ProgettoSIW.service.UserService;
+import it.uniroma3.siw.ProgettoSIW.model.*;
+import it.uniroma3.siw.ProgettoSIW.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
@@ -31,6 +25,12 @@ public class Start implements ApplicationListener<ContextRefreshedEvent> {
     @Autowired
     private ArtworkService artworkService;
 
+    @Autowired
+    private CuratorService curatorService;
+
+    @Autowired
+    private ArtCollectionService artCollectionService;
+
     @Override
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
         User user = new User();
@@ -44,6 +44,22 @@ public class Start implements ApplicationListener<ContextRefreshedEvent> {
         credentials.setPassword("admin");
         credentials.setUser(user);
         credentialsService.saveCredentials(credentials);
+
+        Curator curator = new Curator();
+        curator.setName("Mario");
+        curator.setSurname("Rossi");
+        curator.setDateOfBirth("1998-09-07");
+        curator.setPlaceOfBirth("Roma");
+        curator.setBadge("hdgsh");
+
+        curatorService.add(curator);
+
+        ArtCollection artCollection = new ArtCollection();
+        artCollection.setName("Permanente");
+        artCollection.setCurator(curator);
+        artCollection.setDescription("Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu");
+
+        artCollectionService.add(artCollection);
 
         Artist artist = new Artist();
         artist.setName("Lucio");
@@ -63,6 +79,7 @@ public class Start implements ApplicationListener<ContextRefreshedEvent> {
         artwork.setTitle("Tagli");
         artwork.setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet nulla nec");
         artwork.setYear(1943);
+        artwork.setArtCollection(artCollection);
 
         Artwork artwork2 = new Artwork();
         artwork2.setPhotoURL("spatialism.jpeg");
@@ -70,6 +87,7 @@ public class Start implements ApplicationListener<ContextRefreshedEvent> {
         artwork2.setTitle("Tagli 2");
         artwork2.setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet nulla nec");
         artwork2.setYear(1943);
+        artwork2.setArtCollection(artCollection);
 
         artistService.add(artist);
         artworkService.add(artwork);

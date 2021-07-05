@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.util.List;
 
 @Setter
@@ -20,9 +19,9 @@ public class Curator {
 
     private String surname;
 
-    private String birthPlace;
+    private String placeOfBirth;
 
-    private LocalDate dateOfBirth;
+    private String dateOfBirth;
 
     private String badge;
 
